@@ -93,12 +93,20 @@ export default class Piece implements IPiece {
   setType(type: string): void {
     this.type = type;
     this.applyClass();
+
     throw new Error('Method not implemented.');
   }
   applyClass(): void {
+    this.el.className = '';
+    this.el.classList.add('cell', this.type, this.direction);
+
     throw new Error('Method not implemented.');
   }
   isCollidingWith(node: Piece): boolean {
+    if (node !== null && this.x === node.x && this.y === node.y) {
+      return true;
+    } else return false;
+
     throw new Error('Method not implemented.');
   }
 
