@@ -73,7 +73,7 @@ export default class Piece implements IPiece {
     prev = null,
   }: IPieceParams) {
     this.direction = direction;
-    this.type = this.type;
+    this.type = type;
     this.x = x;
     this.y = y;
     this.el = document.createElement('div');
