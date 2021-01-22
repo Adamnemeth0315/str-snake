@@ -38,7 +38,7 @@ export default class Game extends BaseGame {
 
   getRandomLevel(): Level {
     let index = Math.floor(Math.random() * this.levels.length);
-    return index;
+    return this.levels[index];
   }
 
   mayIHaveGoldenApple(): boolean {
