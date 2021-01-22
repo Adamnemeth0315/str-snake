@@ -17,7 +17,6 @@ import BaseGame from './BaseGame';
  * metódusként vannak definiálva.
  */
 export default class Game extends BaseGame {
-
   constructor(private levels: Level[]) {
     super();
     this.head = new Piece({ x: 80, y: 80, type: 'head' });
@@ -53,7 +52,8 @@ export default class Game extends BaseGame {
     let verticalGrid = Array.from(document.querySelectorAll('.vertical-grid'));
     let horizontalGrid = Array.from(document.querySelectorAll('.horizontal-grid'));
     let grids = [...verticalGrid, ...horizontalGrid];
-    grids.forEach(item => Utils.removeNode(item));
+    grids.forEach(element => Utils.removeNode(element));
+    this.gridVisible = false;
   }
 
   renderGarden() {
