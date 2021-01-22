@@ -55,3 +55,4 @@ removeNode (el: { parentNode: { remove: (arg0: any) => void; }; }): void {
 }
 
 export default Utils;
+   //comment
