@@ -53,13 +53,13 @@ interface IPiece {
  * Pótold a hiányzó tulajdonságokat és metódusokat az interfész alapján.
  */
 export default class Piece implements IPiece {
-  
-  
-  
+
+
+
   constructor({
-    x,
-    y,
-    type = 'body',
+    x = 0,
+    y = 0,
+    type: string = 'body',
     direction = 'RIGHT',
     next = null,
     prev = null,
@@ -79,6 +79,25 @@ export default class Piece implements IPiece {
     // this.applyClass();
     this.garden.appendChild(this.el);
   }
+  next: Piece;
+  prev: Piece;
+  x: number;
+  y: number;
+  el: HTMLDivElement;
+  direction: string;
+  type: string;
+  garden: HTMLDivElement;
+
+  setType(type: string): void {
+    throw new Error('Method not implemented.');
+  }
+  applyClass(): void {
+    throw new Error('Method not implemented.');
+  }
+  isCollidingWith(node: Piece): boolean {
+    throw new Error('Method not implemented.');
+  }
+
 
   bend(headDirection: string) {
     if (this.direction !== headDirection) {
