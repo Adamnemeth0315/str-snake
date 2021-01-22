@@ -81,7 +81,7 @@ export default class Piece implements IPiece {
     this.prev = prev;
     // Enable for a neat effect
     // this.el.innerHTML = "&#10096;";
-    this.setType(type);
+    this.setType(this.type);
     this.setPos(this.x, this.y);
     this.garden = (document.getElementById('garden') as HTMLDivElement);
     // this.applyClass();
@@ -91,6 +91,8 @@ export default class Piece implements IPiece {
 
 
   setType(type: string): void {
+    this.type = type;
+    this.applyClass();
     throw new Error('Method not implemented.');
   }
   applyClass(): void {
