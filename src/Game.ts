@@ -46,7 +46,9 @@ export default class Game extends BaseGame {
     let pick = Math.floor(Math.random() * 100);
     return pick < chance ? true : false;
   }
-
+  /* 3. járd be a tömböt, és minden elemére hívd meg a Utils.removeNode 
+     * metódust, hogy eltávolítsd őket az oldalról
+     * 4. a this.gridVisible értékét állítsd false -ra */
   removeGrid(): void {
     let verticalGrid = Array.from(document.querySelectorAll('.vertical-grid'));
     let horizontalGrid = Array.from(document.querySelectorAll('.horizontal-grid'));
