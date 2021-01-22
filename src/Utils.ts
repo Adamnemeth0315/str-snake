@@ -47,7 +47,7 @@ class Utils extends Debouncer {
      * @param el {Element} - egy DOM Element típus
      * @returns {void}
      */
-removeNode (el: { parentNode: { remove: (arg0: any) => void; }; }): void {
+removeNode (el): void {
     el.parentNode.remove(el)
 } 
 
