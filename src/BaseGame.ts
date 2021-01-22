@@ -16,6 +16,25 @@ export default abstract class BaseGame implements IBaseGame {
 
     protected noClip: boolean = false;
 
+    head: Piece;
+
+    tail: Piece;
+
+    food: Piece | null;
+
+    goldenApple: Piece | null;
+
+    length: number;
+
+    growth: number;
+
+    score: number;
+
+    currentLevel: Level | null;
+
+    garden: HTMLDivElement;
+
+
     /**
      * @returns {number}
      * Egy random számot szorozz meg a this.level.length -el, 
@@ -42,5 +61,5 @@ export default abstract class BaseGame implements IBaseGame {
      * metódust, hogy eltávolítsd őket az oldalról
      * 4. a this.gridVisible értékét állítsd false -ra
      */
-    abstract removeGrid (): void;
+    abstract removeGrid(): void;
 }

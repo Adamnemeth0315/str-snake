@@ -51,6 +51,7 @@ export default class Game extends BaseGame {
     let verticalGrid = Array.from(document.querySelectorAll('.vertical-grid'));
     let horizontalGrid = Array.from(document.querySelectorAll('.horizontal-grid'));
     let grids = [...verticalGrid, ...horizontalGrid];
+    grids.forEach(item => item)
   }
 
   renderGarden() {
