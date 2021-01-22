@@ -67,7 +67,7 @@ export default class Piece implements IPiece {
   constructor({
     x,
     y,
-    type: string = 'body',
+    type = 'body',
     direction = 'RIGHT',
     next = null,
     prev = null,
