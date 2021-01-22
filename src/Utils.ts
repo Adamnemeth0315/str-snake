@@ -12,6 +12,10 @@ class Debouncer {
      * majd válaszd ki a nagyobbat az előbbi érték és a min közül.
      */
     
+     static bound(num: number, min: number, max: number): number {
+         const less = num > max ? max : num;
+         return less > min ? less : min;
+     }
 
     static debounce<T extends Function>(fun: T, wait: number) {
         let id: any;
@@ -43,8 +47,12 @@ class Utils extends Debouncer {
      * @param el {Element} - egy DOM Element típus
      * @returns {void}
      */
+removeNode (el: { parentNode: { remove: (arg0: any) => void; }; }): void {
+    el.parentNode.remove(el)
+} 
 
 
 }
 
 export default Utils;
+   //comment
