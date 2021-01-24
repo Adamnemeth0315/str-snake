@@ -41,7 +41,7 @@ export default class Game extends BaseGame {
   }
 
   mayIHaveGoldenApple(): boolean {
-    let chance = 5;
+    let chance = 25; // Eredeti let chance = 5; volt, így sűrűbben kapunk zöldalmát.  
     let pick = Math.floor(Math.random() * 100);
     return pick < chance ? true : false;
   }
